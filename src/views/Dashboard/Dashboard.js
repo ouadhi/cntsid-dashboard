@@ -39,7 +39,7 @@ const cardChartData1 = {
       label: 'My First dataset',
       backgroundColor: brandPrimary,
       borderColor: 'rgba(255,255,255,.55)',
-      data: [65, 59, 84, 84, 51, 55, 40],
+      data: [50, 50, 50, 84, 51, 55, 40],
     },
   ],
 };
@@ -463,6 +463,12 @@ class Dashboard extends Component {
       dropdownOpen: false,
       radioSelected: 2,
     };
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:8881/api/ui')
+  .then(response => response.json())
+  .then(json => console.log(json.in.messageInItems))
   }
 
   toggle() {

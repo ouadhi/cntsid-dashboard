@@ -36,6 +36,12 @@ const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 
+const DashboardApp = React.lazy(() => import('./views/exchangeApp/DashboardApp'));
+const MessageIn = React.lazy(() => import('./views/exchangeApp/MessageIn'));
+const MessageOut = React.lazy(()=>import('./views/exchangeApp/MessageOut'))
+const Logspanel  = React.lazy(()=> import('./views/exchangeApp/Logpanel'))
+const Settings  = React.lazy(()=> import('./views/exchangeApp/Settings'))
+
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -79,6 +85,11 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+  { path: '/dash-app', exact: true, name: 'Dashboard Application ', component: DashboardApp },
+  { path: '/message-in', exact: true, name: 'Message In ', component: MessageIn },
+  { path: '/message-out', exact: true, name: 'Message out ', component: MessageOut },
+  { path: '/logs-panel', exact: true, name: 'Logs Panel', component: Logspanel },
+  { path: '/settings', exact: true, name: 'Settings', component: Settings },
 ];
 
 export default routes;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Badge, Card, CardBody, CardHeader, Col, Row, Table } from 'reactstrap';
+import { Badge, Card, CardBody, CardHeader, Col, Row, Table , Button} from 'reactstrap';
 
 import usersData from './UsersData'
 
@@ -23,7 +23,9 @@ function UserRow(props) {
       <td>{user.registered}</td>
       <td>{user.role}</td>
       <td><Link to={userLink}><Badge color={getBadge(user.status)}>{user.status}</Badge></Link></td>
+      <td><Link to={userLink}>Delete</Link></td>
     </tr>
+    
   )
 }
 
@@ -39,7 +41,7 @@ class Users extends Component {
           <Col xl={6}>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i> Users <small className="text-muted">example</small>
+                <i className="fa fa-align-justify"></i> Users
               </CardHeader>
               <CardBody>
                 <Table responsive hover>

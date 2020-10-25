@@ -4,10 +4,48 @@ export default {
       name: 'Dashboard',
       url: '/dashboard',
       icon: 'icon-speedometer',
+    },
+    {
+      name: 'Dashboard-App',
+      url: '/dash-app',
+      icon: 'icon-speedometer',
+    },
+
+    {
+      name: 'Message',
+      url: '/message-in',
+      icon: 'icon-login',
       badge: {
         variant: 'info',
-        text: 'NEW',
-      },
+        text: 'IN',
+      }
+    },
+    {
+      name: 'Message',
+      url: '/message-out',
+      icon: 'icon-logout',
+      badge: {
+        variant: 'info',
+        text: 'OUT',
+      }
+    },
+    {
+      name: 'Logs',
+      url: '/logs-panel',
+      icon: 'icon-book-open',
+      badge: {
+        variant: '',
+        text: '',
+      }
+    },
+    {
+      name: 'Settings',
+      url: '/settings',
+      icon: 'icon-wrench',
+      badge: {
+        variant: '',
+        text: '',
+      }
     },
     {
       title: true,

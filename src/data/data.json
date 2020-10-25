@@ -1,0 +1,37 @@
+{
+"messagein":{
+    "manifest":{
+        "consumed":1000 , 
+        "notyet":30
+    },
+    "declaration":{
+        "consumed":44 , 
+        "notyet":5
+    },
+    "visite":{
+        "consumed":55 , 
+        "notyet":20
+    },
+    "takeoff":{
+        "consumed":79 , 
+        "notyet":0
+    }
+
+},
+
+"messageout":{
+    "debarquement":{
+        "all":1000 , 
+        "today":30
+    },
+    "visite":{
+        "all":44 , 
+        "today":5
+    },
+    "pullout":{
+        "all":55 , 
+        "today":20
+    }
+}
+
+}

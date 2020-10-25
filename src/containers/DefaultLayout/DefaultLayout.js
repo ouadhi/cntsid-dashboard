@@ -36,16 +36,19 @@ class DefaultLayout extends Component {
   render() {
     return (
       <div className="app">
+        
         <AppHeader fixed>
           <Suspense  fallback={this.loading()}>
             <DefaultHeader onLogout={e=>this.signOut(e)}/>
           </Suspense>
         </AppHeader>
+        
         <div className="app-body">
           <AppSidebar fixed display="lg">
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense>
+            
             <AppSidebarNav navConfig={navigation} {...this.props} router={router}/>
             </Suspense>
             <AppSidebarFooter />
