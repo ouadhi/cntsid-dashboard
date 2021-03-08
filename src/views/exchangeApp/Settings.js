@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import Task from "./Task";
 import { Card, Button, CardTitle, CardText, Row, Col } from "reactstrap";
 import ConfigService from "../../data/ConfigService";
-import { AppSwitch } from "@coreui/react";
-import { element } from "prop-types";
 
 export default class Settings extends Component {
   constructor(props) {
@@ -33,7 +31,9 @@ export default class Settings extends Component {
     );
     let newArray = [...this.state.data];
     newArray[elementsIndex] = configItem;
-    this.setState({ data: newArray }, () => {});
+    this.setState({ data: newArray }, () => {console.log(this.state.data)});
+    
+    
   };
 
   saveAllAction = () => {
@@ -57,7 +57,7 @@ export default class Settings extends Component {
             </Col>
           ))}
         </Row>
-        <Button block color="primary" onClick={this.saveAllAction}></Button>
+        <Button block color="primary" onClick={this.saveAllAction}> Save All Configs</Button>
       </div>
     );
   }

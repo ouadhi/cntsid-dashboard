@@ -96,13 +96,15 @@ export default class MessageOut extends Component {
   }
 
   async componentDidMount() {
+
     this.setState({ isLoading: true });
+
     const response = await fetch("http://localhost:8881/api/v1/message/");
     const json = await response.json();
     this.setState({
       data: json.Out ,
       isLoading: false,
-      liste:json.Out.liste , 
+      liste:json.Out.liste, 
       items:json.Out.stat.items
     });
 
@@ -115,6 +117,7 @@ export default class MessageOut extends Component {
   );
 
   render() {
+    
     return (
       <div>
         {/*
